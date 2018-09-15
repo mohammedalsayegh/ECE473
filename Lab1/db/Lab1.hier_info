@@ -1,0 +1,256 @@
+|carrysave_ripplecarry_adder
+s[0] <= carrysaveadder_pins:inst4.s0
+s[1] <= ripple_carry_adder:inst6.s[0]
+s[2] <= ripple_carry_adder:inst6.s[1]
+s[3] <= ripple_carry_adder:inst6.s[2]
+s[4] <= ripple_carry_adder:inst6.s[3]
+s[5] <= ripple_carry_adder:inst6.cout
+a[0] => carrysaveadder_pins:inst4.a0
+a[1] => carrysaveadder_pins:inst4.a1
+a[2] => carrysaveadder_pins:inst4.a2
+a[3] => carrysaveadder_pins:inst4.a3
+e[0] => carrysaveadder:inst.a[0]
+e[1] => carrysaveadder:inst.a[1]
+e[2] => carrysaveadder:inst.a[2]
+e[3] => carrysaveadder:inst.a[3]
+b[0] => carrysaveadder:inst.b[0]
+b[1] => carrysaveadder:inst.b[1]
+b[2] => carrysaveadder:inst.b[2]
+b[3] => carrysaveadder:inst.b[3]
+f[0] => carrysaveadder:inst.f[0]
+f[1] => carrysaveadder:inst.f[1]
+f[2] => carrysaveadder:inst.f[2]
+f[3] => carrysaveadder:inst.f[3]
+
+
+|carrysave_ripplecarry_adder|ripple_carry_adder:inst6
+cout <= full_adder:inst.cout
+a[0] => full_adder:inst4.a
+a[1] => full_adder:inst3.a
+a[2] => full_adder:inst2.a
+a[3] => full_adder:inst.a
+b[0] => full_adder:inst4.b
+b[1] => full_adder:inst3.b
+b[2] => full_adder:inst2.b
+b[3] => full_adder:inst.b
+cin => full_adder:inst4.cin
+s[0] <= full_adder:inst4.sum
+s[1] <= full_adder:inst3.sum
+s[2] <= full_adder:inst2.sum
+s[3] <= full_adder:inst.sum
+
+
+|carrysave_ripplecarry_adder|ripple_carry_adder:inst6|full_adder:inst
+cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+b => inst3.IN0
+b => inst4.IN1
+b => inst.IN1
+a => inst3.IN1
+a => inst2.IN0
+a => inst.IN0
+cin => inst4.IN0
+cin => inst2.IN1
+cin => inst1.IN1
+sum <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|carrysave_ripplecarry_adder|ripple_carry_adder:inst6|full_adder:inst2
+cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+b => inst3.IN0
+b => inst4.IN1
+b => inst.IN1
+a => inst3.IN1
+a => inst2.IN0
+a => inst.IN0
+cin => inst4.IN0
+cin => inst2.IN1
+cin => inst1.IN1
+sum <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|carrysave_ripplecarry_adder|ripple_carry_adder:inst6|full_adder:inst3
+cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+b => inst3.IN0
+b => inst4.IN1
+b => inst.IN1
+a => inst3.IN1
+a => inst2.IN0
+a => inst.IN0
+cin => inst4.IN0
+cin => inst2.IN1
+cin => inst1.IN1
+sum <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|carrysave_ripplecarry_adder|ripple_carry_adder:inst6|full_adder:inst4
+cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+b => inst3.IN0
+b => inst4.IN1
+b => inst.IN1
+a => inst3.IN1
+a => inst2.IN0
+a => inst.IN0
+cin => inst4.IN0
+cin => inst2.IN1
+cin => inst1.IN1
+sum <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|carrysave_ripplecarry_adder|carrysaveadder_pins:inst4
+c3 <= full_adder:inst.cout
+a3 => full_adder:inst.a
+b3 => full_adder:inst.b
+f3 => full_adder:inst.cin
+s3 <= full_adder:inst.sum
+c2 <= full_adder:inst1.cout
+a2 => full_adder:inst1.a
+b2 => full_adder:inst1.b
+f2 => full_adder:inst1.cin
+s2 <= full_adder:inst1.sum
+c1 <= full_adder:inst2.cout
+a1 => full_adder:inst2.a
+b1 => full_adder:inst2.b
+f1 => full_adder:inst2.cin
+s1 <= full_adder:inst2.sum
+c0 <= full_adder:inst3.cout
+a0 => full_adder:inst3.a
+b0 => full_adder:inst3.b
+f0 => full_adder:inst3.cin
+s0 <= full_adder:inst3.sum
+
+
+|carrysave_ripplecarry_adder|carrysaveadder_pins:inst4|full_adder:inst
+cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+b => inst3.IN0
+b => inst4.IN1
+b => inst.IN1
+a => inst3.IN1
+a => inst2.IN0
+a => inst.IN0
+cin => inst4.IN0
+cin => inst2.IN1
+cin => inst1.IN1
+sum <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|carrysave_ripplecarry_adder|carrysaveadder_pins:inst4|full_adder:inst1
+cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+b => inst3.IN0
+b => inst4.IN1
+b => inst.IN1
+a => inst3.IN1
+a => inst2.IN0
+a => inst.IN0
+cin => inst4.IN0
+cin => inst2.IN1
+cin => inst1.IN1
+sum <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|carrysave_ripplecarry_adder|carrysaveadder_pins:inst4|full_adder:inst2
+cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+b => inst3.IN0
+b => inst4.IN1
+b => inst.IN1
+a => inst3.IN1
+a => inst2.IN0
+a => inst.IN0
+cin => inst4.IN0
+cin => inst2.IN1
+cin => inst1.IN1
+sum <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|carrysave_ripplecarry_adder|carrysaveadder_pins:inst4|full_adder:inst3
+cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+b => inst3.IN0
+b => inst4.IN1
+b => inst.IN1
+a => inst3.IN1
+a => inst2.IN0
+a => inst.IN0
+cin => inst4.IN0
+cin => inst2.IN1
+cin => inst1.IN1
+sum <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|carrysave_ripplecarry_adder|carrysaveadder:inst
+c[0] <= full_adder:inst3.cout
+c[1] <= full_adder:inst2.cout
+c[2] <= full_adder:inst1.cout
+c[3] <= full_adder:inst.cout
+a[0] => full_adder:inst3.a
+a[1] => full_adder:inst2.a
+a[2] => full_adder:inst1.a
+a[3] => full_adder:inst.a
+b[0] => full_adder:inst3.b
+b[1] => full_adder:inst2.b
+b[2] => full_adder:inst1.b
+b[3] => full_adder:inst.b
+f[0] => full_adder:inst3.cin
+f[1] => full_adder:inst2.cin
+f[2] => full_adder:inst1.cin
+f[3] => full_adder:inst.cin
+s[0] <= full_adder:inst3.sum
+s[1] <= full_adder:inst2.sum
+s[2] <= full_adder:inst1.sum
+s[3] <= full_adder:inst.sum
+
+
+|carrysave_ripplecarry_adder|carrysaveadder:inst|full_adder:inst
+cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+b => inst3.IN0
+b => inst4.IN1
+b => inst.IN1
+a => inst3.IN1
+a => inst2.IN0
+a => inst.IN0
+cin => inst4.IN0
+cin => inst2.IN1
+cin => inst1.IN1
+sum <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|carrysave_ripplecarry_adder|carrysaveadder:inst|full_adder:inst1
+cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+b => inst3.IN0
+b => inst4.IN1
+b => inst.IN1
+a => inst3.IN1
+a => inst2.IN0
+a => inst.IN0
+cin => inst4.IN0
+cin => inst2.IN1
+cin => inst1.IN1
+sum <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|carrysave_ripplecarry_adder|carrysaveadder:inst|full_adder:inst2
+cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+b => inst3.IN0
+b => inst4.IN1
+b => inst.IN1
+a => inst3.IN1
+a => inst2.IN0
+a => inst.IN0
+cin => inst4.IN0
+cin => inst2.IN1
+cin => inst1.IN1
+sum <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|carrysave_ripplecarry_adder|carrysaveadder:inst|full_adder:inst3
+cout <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+b => inst3.IN0
+b => inst4.IN1
+b => inst.IN1
+a => inst3.IN1
+a => inst2.IN0
+a => inst.IN0
+cin => inst4.IN0
+cin => inst2.IN1
+cin => inst1.IN1
+sum <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+

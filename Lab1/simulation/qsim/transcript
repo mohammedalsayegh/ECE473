@@ -1,0 +1,31 @@
+# do Lab1.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:43:03 on Sep 15,2018
+# vlog -work work Lab1.vo 
+# -- Compiling module carrysave_ripplecarry_adder
+# 
+# Top level modules:
+# 	carrysave_ripplecarry_adder
+# End time: 11:43:03 on Sep 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:43:03 on Sep 15,2018
+# vlog -work work carrysave_ripplecarry_adder.vwf.vt 
+# -- Compiling module carrysave_ripplecarry_adder_vlg_vec_tst
+# 
+# Top level modules:
+# 	carrysave_ripplecarry_adder_vlg_vec_tst
+# End time: 11:43:03 on Sep 15,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.carrysave_ripplecarry_adder_vlg_vec_tst 
+# Start time: 11:43:03 on Sep 15,2018
+# Loading work.carrysave_ripplecarry_adder_vlg_vec_tst
+# Loading work.carrysave_ripplecarry_adder
+# Loading cyclonev_ver.cyclonev_io_obuf
+# Loading cyclonev_ver.cyclonev_io_ibuf
+# Loading cyclonev_ver.cyclonev_lcell_comb
+# after#23
+# ** Note: $finish    : carrysave_ripplecarry_adder.vwf.vt(50)
+#    Time: 1 us  Iteration: 0  Instance: /carrysave_ripplecarry_adder_vlg_vec_tst
+# End time: 11:43:04 on Sep 15,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
