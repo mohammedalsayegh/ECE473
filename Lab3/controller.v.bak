@@ -1,0 +1,72 @@
+	module controller(
+	input reset,
+	input one, 
+	input x0,
+	input clk,
+	
+	output reg SEL,
+	output reg WEN,
+	output reg [1:0] FS);
+	
+	reg [2:0] state;
+	parameter [2:0] s0=3'b000,
+					s1=3'b001,
+					s2=3'b010,
+					s3=3'b011,
+					s4=3'b100;
+					
+		always @ (posedge CLK or posedge reset)  
+				
+				case(state)
+				
+				s0: begin
+				SEL <= 1;
+				WEN <= 1;
+				
+			    if (one == 1'b1) begin
+				state <= s1;
+				end else if (x0 == 1'b0) begin
+				state <= s4;
+				end else if (x0 == 1'b1) begin
+				state <= s2;
+				end
+				
+				s1: begin
+			    SEL <= 1;
+				WEN <= 1;
+				end
+				
+				s2: begin
+				SEL <= 1;
+				WEN <= 0;
+				
+			    if (x0 == 1'b1) begin
+				state <= s3;
+				end
+				
+				s3: begin
+			    SEL <= 1;
+				WEN <= 1;
+				
+			    if (x0 == 1'b0) begin
+				state <= s3;
+				end
+				
+				s4: begin
+			    SEL <= 1;
+				WEN <= 1;
+				
+			    if (one == 1'b1) begin
+				state <= s1;
+				end else if (x0 == 1'b0) begin
+				state <= s2;
+				end else if (x0 == 1'b1) begin
+				state <= s0;
+				end
+				
+				default :
+				state <= s0;
+			endcase	
+		end				
+  endmodule
+  

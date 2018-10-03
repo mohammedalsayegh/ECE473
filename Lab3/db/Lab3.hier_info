@@ -1,0 +1,686 @@
+|Lab3
+HEX0[0] <= hexdecoder:inst110.out[0]
+HEX0[1] <= hexdecoder:inst110.out[1]
+HEX0[2] <= hexdecoder:inst110.out[2]
+HEX0[3] <= hexdecoder:inst110.out[3]
+HEX0[4] <= hexdecoder:inst110.out[4]
+HEX0[5] <= hexdecoder:inst110.out[5]
+HEX0[6] <= hexdecoder:inst110.out[6]
+KEY[0] => inst12.IN0
+KEY[1] => inst11.IN0
+SW[0] => 2x8mux:inst5.A[0]
+SW[1] => 2x8mux:inst5.A[1]
+SW[2] => 2x8mux:inst5.A[2]
+SW[3] => 2x8mux:inst5.A[3]
+SW[4] => 2x8mux:inst5.A[4]
+SW[5] => 2x8mux:inst5.A[5]
+SW[6] => 2x8mux:inst5.A[6]
+SW[7] => 2x8mux:inst5.A[7]
+HEX1[0] <= hexdecoder:inst000.out[0]
+HEX1[1] <= hexdecoder:inst000.out[1]
+HEX1[2] <= hexdecoder:inst000.out[2]
+HEX1[3] <= hexdecoder:inst000.out[3]
+HEX1[4] <= hexdecoder:inst000.out[4]
+HEX1[5] <= hexdecoder:inst000.out[5]
+HEX1[6] <= hexdecoder:inst000.out[6]
+HEX2[0] <= hexdecoder:inst111.out[0]
+HEX2[1] <= hexdecoder:inst111.out[1]
+HEX2[2] <= hexdecoder:inst111.out[2]
+HEX2[3] <= hexdecoder:inst111.out[3]
+HEX2[4] <= hexdecoder:inst111.out[4]
+HEX2[5] <= hexdecoder:inst111.out[5]
+HEX2[6] <= hexdecoder:inst111.out[6]
+
+
+|Lab3|hexdecoder:inst110
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab3|alu_sp:inst3
+z[0] <= 48mux:5.Y[0]
+z[1] <= 48mux:5.Y[1]
+z[2] <= 48mux:5.Y[2]
+z[3] <= 48mux:5.Y[3]
+z[4] <= 48mux:5.Y[4]
+z[5] <= 48mux:5.Y[5]
+z[6] <= 48mux:5.Y[6]
+z[7] <= 48mux:5.Y[7]
+b[0] => wire_ex:4.d[0]
+b[0] => 8faddb:2.B[1]
+b[0] => 48mux:5.D[0]
+b[1] => wire_ex:4.d[1]
+b[1] => 8faddb:2.B[2]
+b[1] => 48mux:5.D[1]
+b[2] => wire_ex:4.d[2]
+b[2] => 8faddb:2.B[3]
+b[2] => 48mux:5.D[2]
+b[3] => wire_ex:4.d[3]
+b[3] => 8faddb:2.B[4]
+b[3] => 48mux:5.D[3]
+b[4] => wire_ex:4.d[4]
+b[4] => 8faddb:2.B[5]
+b[4] => 48mux:5.D[4]
+b[5] => wire_ex:4.d[5]
+b[5] => 8faddb:2.B[6]
+b[5] => 48mux:5.D[5]
+b[6] => wire_ex:4.d[6]
+b[6] => 8faddb:2.B[7]
+b[6] => 48mux:5.D[6]
+b[7] => wire_ex:4.d[7]
+b[7] => 8faddb:2.B[8]
+b[7] => 48mux:5.D[7]
+a[0] => 8faddb:2.A[1]
+a[1] => 8faddb:2.A[2]
+a[2] => 8faddb:2.A[3]
+a[3] => 8faddb:2.A[4]
+a[4] => 8faddb:2.A[5]
+a[5] => 8faddb:2.A[6]
+a[6] => 8faddb:2.A[7]
+a[7] => 8faddb:2.A[8]
+s[0] => 48mux:5.s[0]
+s[1] => 48mux:5.s[1]
+
+
+|Lab3|alu_sp:inst3|48mux:5
+Y[0] <= 2x8mux:21.Y[0]
+Y[1] <= 2x8mux:21.Y[1]
+Y[2] <= 2x8mux:21.Y[2]
+Y[3] <= 2x8mux:21.Y[3]
+Y[4] <= 2x8mux:21.Y[4]
+Y[5] <= 2x8mux:21.Y[5]
+Y[6] <= 2x8mux:21.Y[6]
+Y[7] <= 2x8mux:21.Y[7]
+s[0] => 2x8mux:21.SEL
+s[1] => 2x8mux:20.SEL
+s[1] => 2x8mux:16.SEL
+A[0] => 2x8mux:20.A[0]
+A[1] => 2x8mux:20.A[1]
+A[2] => 2x8mux:20.A[2]
+A[3] => 2x8mux:20.A[3]
+A[4] => 2x8mux:20.A[4]
+A[5] => 2x8mux:20.A[5]
+A[6] => 2x8mux:20.A[6]
+A[7] => 2x8mux:20.A[7]
+B[0] => 2x8mux:20.B[0]
+B[1] => 2x8mux:20.B[1]
+B[2] => 2x8mux:20.B[2]
+B[3] => 2x8mux:20.B[3]
+B[4] => 2x8mux:20.B[4]
+B[5] => 2x8mux:20.B[5]
+B[6] => 2x8mux:20.B[6]
+B[7] => 2x8mux:20.B[7]
+C[0] => 2x8mux:16.A[0]
+C[1] => 2x8mux:16.A[1]
+C[2] => 2x8mux:16.A[2]
+C[3] => 2x8mux:16.A[3]
+C[4] => 2x8mux:16.A[4]
+C[5] => 2x8mux:16.A[5]
+C[6] => 2x8mux:16.A[6]
+C[7] => 2x8mux:16.A[7]
+D[0] => 2x8mux:16.B[0]
+D[1] => 2x8mux:16.B[1]
+D[2] => 2x8mux:16.B[2]
+D[3] => 2x8mux:16.B[3]
+D[4] => 2x8mux:16.B[4]
+D[5] => 2x8mux:16.B[5]
+D[6] => 2x8mux:16.B[6]
+D[7] => 2x8mux:16.B[7]
+
+
+|Lab3|alu_sp:inst3|48mux:5|2x8mux:21
+Y[0] <= 5.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= 6.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= 11.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= 12.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= 17.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= 18.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= 23.DB_MAX_OUTPUT_PORT_TYPE
+Y[7] <= 24.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => 3.IN0
+A[1] => 8.IN0
+A[2] => 9.IN0
+A[3] => 14.IN1
+A[4] => 15.IN1
+A[5] => 20.IN1
+A[6] => 21.IN1
+A[7] => 26.IN1
+SEL => 28.IN0
+SEL => 4.IN1
+SEL => 7.IN1
+SEL => 10.IN1
+SEL => 13.IN1
+SEL => 16.IN1
+SEL => 19.IN1
+SEL => 22.IN1
+SEL => 25.IN1
+B[0] => 4.IN0
+B[1] => 7.IN0
+B[2] => 10.IN0
+B[3] => 13.IN0
+B[4] => 16.IN0
+B[5] => 19.IN0
+B[6] => 22.IN0
+B[7] => 25.IN0
+
+
+|Lab3|alu_sp:inst3|48mux:5|2x8mux:20
+Y[0] <= 5.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= 6.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= 11.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= 12.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= 17.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= 18.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= 23.DB_MAX_OUTPUT_PORT_TYPE
+Y[7] <= 24.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => 3.IN0
+A[1] => 8.IN0
+A[2] => 9.IN0
+A[3] => 14.IN1
+A[4] => 15.IN1
+A[5] => 20.IN1
+A[6] => 21.IN1
+A[7] => 26.IN1
+SEL => 28.IN0
+SEL => 4.IN1
+SEL => 7.IN1
+SEL => 10.IN1
+SEL => 13.IN1
+SEL => 16.IN1
+SEL => 19.IN1
+SEL => 22.IN1
+SEL => 25.IN1
+B[0] => 4.IN0
+B[1] => 7.IN0
+B[2] => 10.IN0
+B[3] => 13.IN0
+B[4] => 16.IN0
+B[5] => 19.IN0
+B[6] => 22.IN0
+B[7] => 25.IN0
+
+
+|Lab3|alu_sp:inst3|48mux:5|2x8mux:16
+Y[0] <= 5.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= 6.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= 11.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= 12.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= 17.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= 18.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= 23.DB_MAX_OUTPUT_PORT_TYPE
+Y[7] <= 24.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => 3.IN0
+A[1] => 8.IN0
+A[2] => 9.IN0
+A[3] => 14.IN1
+A[4] => 15.IN1
+A[5] => 20.IN1
+A[6] => 21.IN1
+A[7] => 26.IN1
+SEL => 28.IN0
+SEL => 4.IN1
+SEL => 7.IN1
+SEL => 10.IN1
+SEL => 13.IN1
+SEL => 16.IN1
+SEL => 19.IN1
+SEL => 22.IN1
+SEL => 25.IN1
+B[0] => 4.IN0
+B[1] => 7.IN0
+B[2] => 10.IN0
+B[3] => 13.IN0
+B[4] => 16.IN0
+B[5] => 19.IN0
+B[6] => 22.IN0
+B[7] => 25.IN0
+
+
+|Lab3|alu_sp:inst3|wire_ex:4
+sl[0] <= 1.DB_MAX_OUTPUT_PORT_TYPE
+sl[1] <= d[0].DB_MAX_OUTPUT_PORT_TYPE
+sl[2] <= d[1].DB_MAX_OUTPUT_PORT_TYPE
+sl[3] <= d[2].DB_MAX_OUTPUT_PORT_TYPE
+sl[4] <= d[3].DB_MAX_OUTPUT_PORT_TYPE
+sl[5] <= d[4].DB_MAX_OUTPUT_PORT_TYPE
+sl[6] <= d[5].DB_MAX_OUTPUT_PORT_TYPE
+sl[7] <= d[6].DB_MAX_OUTPUT_PORT_TYPE
+d[0] => sl[1].DATAIN
+d[1] => sl[2].DATAIN
+d[1] => sr[0].DATAIN
+d[2] => sl[3].DATAIN
+d[2] => sr[1].DATAIN
+d[3] => sl[4].DATAIN
+d[3] => sr[2].DATAIN
+d[4] => sl[5].DATAIN
+d[4] => sr[3].DATAIN
+d[5] => sl[6].DATAIN
+d[5] => sr[4].DATAIN
+d[6] => sl[7].DATAIN
+d[6] => sr[5].DATAIN
+d[7] => sr[6].DATAIN
+sr[0] <= d[1].DB_MAX_OUTPUT_PORT_TYPE
+sr[1] <= d[2].DB_MAX_OUTPUT_PORT_TYPE
+sr[2] <= d[3].DB_MAX_OUTPUT_PORT_TYPE
+sr[3] <= d[4].DB_MAX_OUTPUT_PORT_TYPE
+sr[4] <= d[5].DB_MAX_OUTPUT_PORT_TYPE
+sr[5] <= d[6].DB_MAX_OUTPUT_PORT_TYPE
+sr[6] <= d[7].DB_MAX_OUTPUT_PORT_TYPE
+sr[7] <= 26.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab3|alu_sp:inst3|8faddb:2
+cin => f8faddb:sub.cin
+a[1] => f8faddb:sub.a[1]
+a[2] => f8faddb:sub.a[2]
+a[3] => f8faddb:sub.a[3]
+a[4] => f8faddb:sub.a[4]
+a[5] => f8faddb:sub.a[5]
+a[6] => f8faddb:sub.a[6]
+a[7] => f8faddb:sub.a[7]
+a[8] => f8faddb:sub.a[8]
+b[1] => f8faddb:sub.b[1]
+b[2] => f8faddb:sub.b[2]
+b[3] => f8faddb:sub.b[3]
+b[4] => f8faddb:sub.b[4]
+b[5] => f8faddb:sub.b[5]
+b[6] => f8faddb:sub.b[6]
+b[7] => f8faddb:sub.b[7]
+b[8] => f8faddb:sub.b[8]
+cout <= f8faddb:sub.cout
+sum[1] <= f8faddb:sub.sum[1]
+sum[2] <= f8faddb:sub.sum[2]
+sum[3] <= f8faddb:sub.sum[3]
+sum[4] <= f8faddb:sub.sum[4]
+sum[5] <= f8faddb:sub.sum[5]
+sum[6] <= f8faddb:sub.sum[6]
+sum[7] <= f8faddb:sub.sum[7]
+sum[8] <= f8faddb:sub.sum[8]
+
+
+|Lab3|alu_sp:inst3|8faddb:2|f8faddb:sub
+SUM7 <= 234.DB_MAX_OUTPUT_PORT_TYPE
+CIN => 250.DATAIN
+A1 => 190.IN1
+A1 => 192.IN1
+A1 => 187.IN1
+B1 => 192.IN0
+B1 => 191.IN1
+B1 => 186.IN1
+A2 => 198.IN1
+A2 => 200.IN1
+A2 => 195.IN1
+B2 => 200.IN0
+B2 => 199.IN1
+B2 => 194.IN1
+A3 => 206.IN1
+A3 => 208.IN1
+A3 => 203.IN1
+B3 => 208.IN0
+B3 => 207.IN1
+B3 => 202.IN1
+A4 => 214.IN1
+A4 => 216.IN1
+A4 => 211.IN1
+B4 => 216.IN0
+B4 => 215.IN1
+B4 => 210.IN1
+A5 => 222.IN1
+A5 => 224.IN1
+A5 => 219.IN1
+B5 => 224.IN0
+B5 => 223.IN1
+B5 => 218.IN1
+A6 => 230.IN1
+A6 => 232.IN1
+A6 => 227.IN1
+B6 => 232.IN0
+B6 => 231.IN1
+B6 => 226.IN1
+A7 => 235.IN1
+A7 => 238.IN1
+A7 => 240.IN1
+B7 => 234.IN1
+B7 => 240.IN0
+B7 => 239.IN1
+COUT <= 267.DB_MAX_OUTPUT_PORT_TYPE
+A8 => 246.IN1
+A8 => 248.IN1
+A8 => 243.IN1
+B8 => 248.IN0
+B8 => 247.IN1
+B8 => 242.IN1
+SUM8 <= 242.DB_MAX_OUTPUT_PORT_TYPE
+SUM6 <= 226.DB_MAX_OUTPUT_PORT_TYPE
+SUM5 <= 218.DB_MAX_OUTPUT_PORT_TYPE
+SUM4 <= 210.DB_MAX_OUTPUT_PORT_TYPE
+SUM3 <= 202.DB_MAX_OUTPUT_PORT_TYPE
+SUM2 <= 194.DB_MAX_OUTPUT_PORT_TYPE
+SUM1 <= 186.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab3|74377b:inst6
+Q4 <= enadff:15.Q
+EN => 6.IN0
+D4 => enadff:15.D
+CLK => enadff:15.CLK
+CLK => enadff:10.CLK
+CLK => enadff:3.CLK
+CLK => enadff:2.CLK
+CLK => enadff:18.CLK
+CLK => enadff:19.CLK
+CLK => enadff:24.CLK
+CLK => enadff:25.CLK
+Q3 <= enadff:10.Q
+D3 => enadff:10.D
+Q2 <= enadff:3.Q
+D2 => enadff:3.D
+Q1 <= enadff:2.Q
+D1 => enadff:2.D
+Q5 <= enadff:18.Q
+D5 => enadff:18.D
+Q6 <= enadff:19.Q
+D6 => enadff:19.D
+Q7 <= enadff:24.Q
+D7 => enadff:24.D
+Q8 <= enadff:25.Q
+D8 => enadff:25.D
+
+
+|Lab3|74377b:inst6|enadff:15
+Q <= 3.DB_MAX_OUTPUT_PORT_TYPE
+PRN => 3.PRESET
+CLRN => 3.ACLR
+D => 3.DATAIN
+CLK => 3.CLK
+ENA => 3.ENA
+
+
+|Lab3|74377b:inst6|enadff:10
+Q <= 3.DB_MAX_OUTPUT_PORT_TYPE
+PRN => 3.PRESET
+CLRN => 3.ACLR
+D => 3.DATAIN
+CLK => 3.CLK
+ENA => 3.ENA
+
+
+|Lab3|74377b:inst6|enadff:3
+Q <= 3.DB_MAX_OUTPUT_PORT_TYPE
+PRN => 3.PRESET
+CLRN => 3.ACLR
+D => 3.DATAIN
+CLK => 3.CLK
+ENA => 3.ENA
+
+
+|Lab3|74377b:inst6|enadff:2
+Q <= 3.DB_MAX_OUTPUT_PORT_TYPE
+PRN => 3.PRESET
+CLRN => 3.ACLR
+D => 3.DATAIN
+CLK => 3.CLK
+ENA => 3.ENA
+
+
+|Lab3|74377b:inst6|enadff:18
+Q <= 3.DB_MAX_OUTPUT_PORT_TYPE
+PRN => 3.PRESET
+CLRN => 3.ACLR
+D => 3.DATAIN
+CLK => 3.CLK
+ENA => 3.ENA
+
+
+|Lab3|74377b:inst6|enadff:19
+Q <= 3.DB_MAX_OUTPUT_PORT_TYPE
+PRN => 3.PRESET
+CLRN => 3.ACLR
+D => 3.DATAIN
+CLK => 3.CLK
+ENA => 3.ENA
+
+
+|Lab3|74377b:inst6|enadff:24
+Q <= 3.DB_MAX_OUTPUT_PORT_TYPE
+PRN => 3.PRESET
+CLRN => 3.ACLR
+D => 3.DATAIN
+CLK => 3.CLK
+ENA => 3.ENA
+
+
+|Lab3|74377b:inst6|enadff:25
+Q <= 3.DB_MAX_OUTPUT_PORT_TYPE
+PRN => 3.PRESET
+CLRN => 3.ACLR
+D => 3.DATAIN
+CLK => 3.CLK
+ENA => 3.ENA
+
+
+|Lab3|2x8mux:inst5
+Y[0] <= 5.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= 6.DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= 11.DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= 12.DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= 17.DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= 18.DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= 23.DB_MAX_OUTPUT_PORT_TYPE
+Y[7] <= 24.DB_MAX_OUTPUT_PORT_TYPE
+A[0] => 3.IN0
+A[1] => 8.IN0
+A[2] => 9.IN0
+A[3] => 14.IN1
+A[4] => 15.IN1
+A[5] => 20.IN1
+A[6] => 21.IN1
+A[7] => 26.IN1
+SEL => 28.IN0
+SEL => 4.IN1
+SEL => 7.IN1
+SEL => 10.IN1
+SEL => 13.IN1
+SEL => 16.IN1
+SEL => 19.IN1
+SEL => 22.IN1
+SEL => 25.IN1
+B[0] => 4.IN0
+B[1] => 7.IN0
+B[2] => 10.IN0
+B[3] => 13.IN0
+B[4] => 16.IN0
+B[5] => 19.IN0
+B[6] => 22.IN0
+B[7] => 25.IN0
+
+
+|Lab3|controller:inst
+reset => WEN~reg0.PRESET
+reset => SEL~reg0.ACLR
+reset => FS[0]~reg0.PRESET
+reset => FS[1]~reg0.PRESET
+reset => state~5.DATAIN
+one => state.OUTPUTSELECT
+one => state.OUTPUTSELECT
+one => state.OUTPUTSELECT
+one => state.OUTPUTSELECT
+one => state.OUTPUTSELECT
+one => state.OUTPUTSELECT
+one => state.OUTPUTSELECT
+one => Selector3.IN3
+x0 => state.OUTPUTSELECT
+x0 => state.OUTPUTSELECT
+x0 => state.OUTPUTSELECT
+x0 => state.OUTPUTSELECT
+x0 => state.OUTPUTSELECT
+x0 => state.DATAA
+x0 => state.OUTPUTSELECT
+x0 => state.OUTPUTSELECT
+x0 => state.OUTPUTSELECT
+x0 => state.OUTPUTSELECT
+x0 => state.OUTPUTSELECT
+x0 => state.DATAA
+clk => WEN~reg0.CLK
+clk => SEL~reg0.CLK
+clk => FS[0]~reg0.CLK
+clk => FS[1]~reg0.CLK
+clk => state~3.DATAIN
+SEL <= SEL~reg0.DB_MAX_OUTPUT_PORT_TYPE
+WEN <= WEN~reg0.DB_MAX_OUTPUT_PORT_TYPE
+FS[0] <= FS[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+FS[1] <= FS[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state_out[0] <= state_out.DB_MAX_OUTPUT_PORT_TYPE
+state_out[1] <= FS.DB_MAX_OUTPUT_PORT_TYPE
+state_out[2] <= state_out[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab3|OneDetector:inst4
+One <= inst.DB_MAX_OUTPUT_PORT_TYPE
+X[0] => inst2.IN0
+X[1] => inst.IN5
+X[2] => inst.IN3
+X[3] => inst.IN4
+X[4] => inst.IN2
+X[5] => inst.IN0
+X[6] => inst.IN1
+X[7] => inst.IN6
+
+
+|Lab3|74377b:inst7
+Q4 <= enadff:15.Q
+EN => 6.IN0
+D4 => enadff:15.D
+CLK => enadff:15.CLK
+CLK => enadff:10.CLK
+CLK => enadff:3.CLK
+CLK => enadff:2.CLK
+CLK => enadff:18.CLK
+CLK => enadff:19.CLK
+CLK => enadff:24.CLK
+CLK => enadff:25.CLK
+Q3 <= enadff:10.Q
+D3 => enadff:10.D
+Q2 <= enadff:3.Q
+D2 => enadff:3.D
+Q1 <= enadff:2.Q
+D1 => enadff:2.D
+Q5 <= enadff:18.Q
+D5 => enadff:18.D
+Q6 <= enadff:19.Q
+D6 => enadff:19.D
+Q7 <= enadff:24.Q
+D7 => enadff:24.D
+Q8 <= enadff:25.Q
+D8 => enadff:25.D
+
+
+|Lab3|74377b:inst7|enadff:15
+Q <= 3.DB_MAX_OUTPUT_PORT_TYPE
+PRN => 3.PRESET
+CLRN => 3.ACLR
+D => 3.DATAIN
+CLK => 3.CLK
+ENA => 3.ENA
+
+
+|Lab3|74377b:inst7|enadff:10
+Q <= 3.DB_MAX_OUTPUT_PORT_TYPE
+PRN => 3.PRESET
+CLRN => 3.ACLR
+D => 3.DATAIN
+CLK => 3.CLK
+ENA => 3.ENA
+
+
+|Lab3|74377b:inst7|enadff:3
+Q <= 3.DB_MAX_OUTPUT_PORT_TYPE
+PRN => 3.PRESET
+CLRN => 3.ACLR
+D => 3.DATAIN
+CLK => 3.CLK
+ENA => 3.ENA
+
+
+|Lab3|74377b:inst7|enadff:2
+Q <= 3.DB_MAX_OUTPUT_PORT_TYPE
+PRN => 3.PRESET
+CLRN => 3.ACLR
+D => 3.DATAIN
+CLK => 3.CLK
+ENA => 3.ENA
+
+
+|Lab3|74377b:inst7|enadff:18
+Q <= 3.DB_MAX_OUTPUT_PORT_TYPE
+PRN => 3.PRESET
+CLRN => 3.ACLR
+D => 3.DATAIN
+CLK => 3.CLK
+ENA => 3.ENA
+
+
+|Lab3|74377b:inst7|enadff:19
+Q <= 3.DB_MAX_OUTPUT_PORT_TYPE
+PRN => 3.PRESET
+CLRN => 3.ACLR
+D => 3.DATAIN
+CLK => 3.CLK
+ENA => 3.ENA
+
+
+|Lab3|74377b:inst7|enadff:24
+Q <= 3.DB_MAX_OUTPUT_PORT_TYPE
+PRN => 3.PRESET
+CLRN => 3.ACLR
+D => 3.DATAIN
+CLK => 3.CLK
+ENA => 3.ENA
+
+
+|Lab3|74377b:inst7|enadff:25
+Q <= 3.DB_MAX_OUTPUT_PORT_TYPE
+PRN => 3.PRESET
+CLRN => 3.ACLR
+D => 3.DATAIN
+CLK => 3.CLK
+ENA => 3.ENA
+
+
+|Lab3|hexdecoder:inst000
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Lab3|hexdecoder:inst111
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
