@@ -5,9 +5,9 @@ DATA_RADIX = HEX;             -- The radix for data values
 CONTENT                       -- start of (address : data pairs)
 BEGIN
 
-00 : 11223344;                -- memory address : data
+00 : 1F2F3F4F;                -- memory address : data
 01 : 12345678;
-02 : 11111111;
+02 : 12121212;
 15 : ADDBADFA;
 2E : FEDCBA98;
 3A : DEADBEEF;

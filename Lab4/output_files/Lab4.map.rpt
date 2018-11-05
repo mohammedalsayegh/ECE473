@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab4
-Tue Oct 23 12:31:57 2018
+Wed Oct 24 14:09:12 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -61,7 +61,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct 23 12:31:57 2018       ;
+; Analysis & Synthesis Status     ; Successful - Wed Oct 24 14:09:12 2018       ;
 ; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                   ; Lab4                                        ;
 ; Top-level Entity Name           ; Lab4                                        ;
@@ -221,9 +221,9 @@ refer to the applicable agreement for further details.
 ; db/mux_chb.tdf                                             ; yes             ; Auto-Generated Megafunction            ; C:/Users/black/OneDrive/Documents/ECE473/Lab4/db/mux_chb.tdf                                             ;         ;
 ; db/mux_jhb.tdf                                             ; yes             ; Auto-Generated Megafunction            ; C:/Users/black/OneDrive/Documents/ECE473/Lab4/db/mux_jhb.tdf                                             ;         ;
 ; db/altsyncram_7mo2.tdf                                     ; yes             ; Auto-Generated Megafunction            ; C:/Users/black/OneDrive/Documents/ECE473/Lab4/db/altsyncram_7mo2.tdf                                     ;         ;
-; vga_demo_v1.8/vga_demo_v1.8/vga_demo/ins.mif               ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/black/OneDrive/Documents/ECE473/Lab4/vga_demo_v1.8/vga_demo_v1.8/vga_demo/ins.mif               ;         ;
+; ./VGA_Demo_V1.8/VGA_Demo_V1.8/VGA_DEMO/ins.mif             ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/black/OneDrive/Documents/ECE473/Lab4/VGA_Demo_V1.8/VGA_Demo_V1.8/VGA_DEMO/ins.mif               ;         ;
 ; db/altsyncram_noo2.tdf                                     ; yes             ; Auto-Generated Megafunction            ; C:/Users/black/OneDrive/Documents/ECE473/Lab4/db/altsyncram_noo2.tdf                                     ;         ;
-; vga_demo_v1.8/vga_demo_v1.8/vga_demo/data.mif              ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/black/OneDrive/Documents/ECE473/Lab4/vga_demo_v1.8/vga_demo_v1.8/vga_demo/data.mif              ;         ;
+; ./VGA_Demo_V1.8/VGA_Demo_V1.8/VGA_DEMO/data.mif            ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/black/OneDrive/Documents/ECE473/Lab4/VGA_Demo_V1.8/VGA_Demo_V1.8/VGA_DEMO/data.mif              ;         ;
 +------------------------------------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -2658,7 +2658,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Tue Oct 23 12:31:35 2018
+    Info: Processing started: Wed Oct 24 14:08:49 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab4 -c Lab4
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -2877,6 +2877,11 @@ Info (12133): Instantiated megafunction "instMem:inst1|altsyncram:altsyncram_com
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_7mo2.tdf
     Info (12023): Found entity 1: altsyncram_7mo2 File: C:/Users/black/OneDrive/Documents/ECE473/Lab4/db/altsyncram_7mo2.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_7mo2" for hierarchy "instMem:inst1|altsyncram:altsyncram_component|altsyncram_7mo2:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (113028): 58 out of 64 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 4 warnings found, and 4 warnings are reported. File: C:/Users/black/OneDrive/Documents/ECE473/Lab4/VGA_Demo_V1.8/VGA_Demo_V1.8/VGA_DEMO/ins.mif Line: 1
+    Warning (113027): Addresses ranging from 3 to 20 are not initialized File: C:/Users/black/OneDrive/Documents/ECE473/Lab4/VGA_Demo_V1.8/VGA_Demo_V1.8/VGA_DEMO/ins.mif Line: 1
+    Warning (113027): Addresses ranging from 22 to 45 are not initialized File: C:/Users/black/OneDrive/Documents/ECE473/Lab4/VGA_Demo_V1.8/VGA_Demo_V1.8/VGA_DEMO/ins.mif Line: 1
+    Warning (113027): Addresses ranging from 47 to 57 are not initialized File: C:/Users/black/OneDrive/Documents/ECE473/Lab4/VGA_Demo_V1.8/VGA_Demo_V1.8/VGA_DEMO/ins.mif Line: 1
+    Warning (113027): Addresses ranging from 59 to 63 are not initialized File: C:/Users/black/OneDrive/Documents/ECE473/Lab4/VGA_Demo_V1.8/VGA_Demo_V1.8/VGA_DEMO/ins.mif Line: 1
 Info (12128): Elaborating entity "dataMem" for hierarchy "dataMem:inst2"
 Info (12128): Elaborating entity "altsyncram" for hierarchy "dataMem:inst2|altsyncram:altsyncram_component" File: C:/Users/black/OneDrive/Documents/ECE473/Lab4/dataMem.v Line: 99
 Info (12130): Elaborated megafunction instantiation "dataMem:inst2|altsyncram:altsyncram_component" File: C:/Users/black/OneDrive/Documents/ECE473/Lab4/dataMem.v Line: 99
@@ -2910,6 +2915,13 @@ Info (12133): Instantiated megafunction "dataMem:inst2|altsyncram:altsyncram_com
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_noo2.tdf
     Info (12023): Found entity 1: altsyncram_noo2 File: C:/Users/black/OneDrive/Documents/ECE473/Lab4/db/altsyncram_noo2.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_noo2" for hierarchy "dataMem:inst2|altsyncram:altsyncram_component|altsyncram_noo2:auto_generated" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (113028): 53 out of 64 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 4 warnings found, and 4 warnings are reported. File: C:/Users/black/OneDrive/Documents/ECE473/Lab4/VGA_Demo_V1.8/VGA_Demo_V1.8/VGA_DEMO/data.mif Line: 1
+    Warning (113027): Addresses ranging from 7 to 20 are not initialized File: C:/Users/black/OneDrive/Documents/ECE473/Lab4/VGA_Demo_V1.8/VGA_Demo_V1.8/VGA_DEMO/data.mif Line: 1
+    Warning (113027): Addresses ranging from 22 to 45 are not initialized File: C:/Users/black/OneDrive/Documents/ECE473/Lab4/VGA_Demo_V1.8/VGA_Demo_V1.8/VGA_DEMO/data.mif Line: 1
+    Warning (113027): Addresses ranging from 47 to 57 are not initialized File: C:/Users/black/OneDrive/Documents/ECE473/Lab4/VGA_Demo_V1.8/VGA_Demo_V1.8/VGA_DEMO/data.mif Line: 1
+    Warning (113027): Addresses ranging from 59 to 62 are not initialized File: C:/Users/black/OneDrive/Documents/ECE473/Lab4/VGA_Demo_V1.8/VGA_Demo_V1.8/VGA_DEMO/data.mif Line: 1
+Warning (113031): 1 out of 64 addresses are reinitialized. The latest initialized data will replace the existing data. There are 1 warnings found, and 1 warnings are reported. File: C:/Users/black/OneDrive/Documents/ECE473/Lab4/VGA_Demo_V1.8/VGA_Demo_V1.8/VGA_DEMO/data.mif Line: 1
+    Warning (113030): Memory Initialization File address 2 is reinitialized File: C:/Users/black/OneDrive/Documents/ECE473/Lab4/ Line: 15
 Info (12128): Elaborating entity "filereg" for hierarchy "filereg:inst32"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_B[3]" is stuck at GND
@@ -2998,11 +3010,11 @@ Info (21057): Implemented 1866 device resources after synthesis - the final reso
     Info (21064): Implemented 102 RAM segments
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 1 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 115 warnings
-    Info: Peak virtual memory: 4917 megabytes
-    Info: Processing ended: Tue Oct 23 12:31:57 2018
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:31
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 127 warnings
+    Info: Peak virtual memory: 4915 megabytes
+    Info: Processing ended: Wed Oct 24 14:09:12 2018
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:32
 
 
 +------------------------------------------+

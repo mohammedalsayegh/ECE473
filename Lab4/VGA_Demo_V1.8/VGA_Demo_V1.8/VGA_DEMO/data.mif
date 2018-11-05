@@ -5,13 +5,13 @@ DATA_RADIX = HEX;             -- The radix for data values
 CONTENT                       -- start of (address : data pairs)
 BEGIN
 
-00 : 11111111;                -- memory address : data
-01 : 22222222;                -- memory address : data
-02 : 33333333;                -- memory address : data
-03 : 44444444;                -- memory address : data
-04 : 55555555;                -- memory address : data
-05 : 66666666;                -- memory address : data
-06 : 77777777;                -- memory address : data
+00 : 1F1F1F1F;                -- memory address : data
+01 : F2F2F2F2;                -- memory address : data
+02 : 3F3F3F3F;                -- memory address : data
+03 : F4F4F4F4;                -- memory address : data
+04 : 5F5F5F5F;                -- memory address : data
+05 : F6F6F6F6;                -- memory address : data
+06 : 7F7F7F7F;                -- memory address : data
 02 : 9ABCDEF0;
 15 : ADDBADFA;
 2E : FEDCBA98;
