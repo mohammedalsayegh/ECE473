@@ -1,0 +1,11 @@
+// Add.v
+
+module add(
+	input wire [31:0] port1, port2,
+	output reg [31:0] out,
+	input wire clock);
+	
+	always @(negedge clock) begin
+		out = port1 + port2;
+	end
+endmodule
